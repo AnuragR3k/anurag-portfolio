@@ -10,3 +10,6 @@ freecode reads this file before every change. Add anything it should always reme
 - Styling: `src/style.css` (tokens, shell, typography, cards) + `src/pages.css` (page-specific); dark glass theme; breakpoints at 620px and a short-screen (max-height 820px) compaction.
 - GitHub activity: "Activity Terrain" by @dorianbaffier (kokonutui, MIT) ported React-free to `src/ascii/activity-terrain.ts`; data baked into `src/data/contributions.json` (26 weeks). Refresh with `node scripts/fetch-contributions.mjs`.
 - `vite.config.ts` has no `vite-plus/oxlint-plugin` block: `vp lint` crashed with it on this VM. Don't re-add.
+- Repo: https://github.com/AnuragR3k/anurag-portfolio (public, branch `main`). `dist/` and `node_modules/` are gitignored; the site builds from source.
+- Commit as Anurag Raghatwan <anuragrag9890@gmail.com> (set in `.git/config`). No credentials are stored in the repo — push needs a token or `gh auth`.
+- README documents run/build commands and credits for the two MIT-sourced visuals.

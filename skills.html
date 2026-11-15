@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anurag Raghatwan's technical stack — Python, Java, C++, TypeScript, React, FastAPI, and security tooling including Suricata, Wazuh, Burp Suite and Nmap."
+    />
+    <meta name="theme-color" content="#0a0c11" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Skills — Anurag Raghatwan</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/Geist-Variable.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/GeistMono-Variable.woff2"
+      crossorigin
+    />
+  </head>
+  <body data-page="skills">
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <filter
+        id="glass-warp"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        color-interpolation-filters="sRGB"
+      >
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.008 0.012"
+          numOctaves="2"
+          seed="4"
+          result="noise"
+        />
+        <feGaussianBlur in="noise" stdDeviation="2" result="map" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="map"
+          scale="36"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+
+    <div class="page">
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Anurag Raghatwan — home">
+          <span class="wordmark-mark" aria-hidden="true">AR</span>
+          <span>anurag<span class="dim">.rag</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="./" data-nav="home">Home</a>
+          <a href="./skills.html" data-nav="skills">Skills</a>
+          <a href="./work.html" data-nav="work">Work</a>
+          <a href="./about.html" data-nav="about">About</a>
+          <a href="./contact.html" data-nav="contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="page-head">
+          <p class="eyebrow enter" data-enter="1">
+            <span class="dot" aria-hidden="true"></span>
+            The stack
+          </p>
+          <h1 class="page-title enter" data-enter="2" style="margin-top: 18px">
+            Tools I build and <span class="accent">break things</span> with.
+          </h1>
+          <p class="page-lede enter" data-enter="3">
+            Software engineering on one side, security research on the other. The two overlap most
+            of the time — which is the interesting part.
+          </p>
+        </div>
+
+        <section class="section">
+          <div class="skill-grid">
+            <article class="card skill-card" data-reveal>
+              <h3>Languages <span class="count">05</span></h3>
+              <div class="chips">
+                <span class="chip solid">Python</span>
+                <span class="chip">Java</span>
+                <span class="chip">C++</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">TypeScript</span>
+              </div>
+            </article>
+
+            <article class="card skill-card" data-reveal style="--d: 60ms">
+              <h3>Frontend <span class="count">07</span></h3>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">React Native</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Vite</span>
+                <span class="chip">Tailwind CSS</span>
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+              </div>
+            </article>
+
+            <article class="card skill-card" data-reveal style="--d: 120ms">
+              <h3>Backend <span class="count">06</span></h3>
+              <div class="chips">
+                <span class="chip solid">FastAPI</span>
+                <span class="chip">Flask</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">Express.js</span>
+                <span class="chip">Spring Boot</span>
+                <span class="chip">REST APIs</span>
+              </div>
+            </article>
+
+            <article class="card skill-card" data-reveal>
+              <h3>Data <span class="count">02</span></h3>
+              <div class="chips">
+                <span class="chip">SQLite</span>
+                <span class="chip">SQL</span>
+              </div>
+            </article>
+
+            <article class="card skill-card" data-reveal style="--d: 60ms">
+              <h3>Infrastructure <span class="count">09</span></h3>
+              <div class="chips">
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">Linux</span>
+                <span class="chip">Fedora</span>
+                <span class="chip">Kali Linux</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Vercel</span>
+                <span class="chip">Railway</span>
+                <span class="chip">CI/CD</span>
+              </div>
+            </article>
+
+            <article class="card skill-card" data-reveal style="--d: 120ms">
+              <h3>Security <span class="count">09</span></h3>
+              <div class="chips">
+                <span class="chip solid">Suricata</span>
+                <span class="chip">Wazuh</span>
+                <span class="chip">Nuclei</span>
+                <span class="chip">Burp Suite</span>
+                <span class="chip">OWASP ZAP</span>
+                <span class="chip">Nmap</span>
+                <span class="chip">Amass</span>
+                <span class="chip">httpx</span>
+                <span class="chip">Juice Shop</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">GitHub activity</h2>
+            <p class="section-note">Last 26 weeks · drag to rotate</p>
+          </div>
+
+          <div
+            class="terrain-card card"
+            data-reveal="scale"
+            style="
+              --terrain-0: #232a38;
+              --terrain-1: #33445f;
+              --terrain-2: #4a6b96;
+              --terrain-3: #6f96cc;
+              --terrain-4: #9dbdf3;
+              --terrain-accent: #b7d4ff;
+              --terrain-text: rgba(226, 232, 245, 0.5);
+            "
+          >
+            <div class="terrain-head">
+              <div>
+                <p class="terrain-total">
+                  <strong data-terrain-total>228</strong>
+                  contributions in the last 26 weeks
+                </p>
+                <p class="terrain-sub">
+                  @<span data-terrain-user>AnuragR3k</span> ·
+                  <span data-terrain-range>May – Nov 2026</span>
+                </p>
+              </div>
+              <div class="terrain-actions">
+                <span class="terrain-readout" data-terrain-readout aria-live="polite"
+                  >Hover a column</span
+                >
+                <button
+                  type="button"
+                  class="btn small ghost"
+                  data-terrain-flat
+                  aria-pressed="false"
+                >
+                  Flat
+                </button>
+                <button type="button" class="btn small ghost" data-terrain-reset>Reset</button>
+              </div>
+            </div>
+
+            <div class="terrain-stage">
+              <canvas
+                class="terrain-canvas"
+                data-terrain-canvas
+                tabindex="0"
+                role="img"
+                aria-label="GitHub contribution graph for the last 26 weeks, drawn as a 3D terrain. Use arrow keys to rotate."
+              ></canvas>
+              <p class="terrain-hint" aria-hidden="true">drag to rotate · click a column</p>
+            </div>
+
+            <div class="terrain-legend" aria-hidden="true">
+              <span>Less</span>
+              <i style="background: var(--terrain-0)"></i>
+              <i style="background: var(--terrain-1)"></i>
+              <i style="background: var(--terrain-2)"></i>
+              <i style="background: var(--terrain-3)"></i>
+              <i style="background: var(--terrain-4)"></i>
+              <span>More</span>
+            </div>
+
+            <noscript>
+              <p class="terrain-sub">
+                This activity view needs JavaScript. 228 contributions in the last 26 weeks.
+              </p>
+            </noscript>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Security focus</h2>
+            <p class="section-note">Where I spend the research time</p>
+          </div>
+
+          <div class="sec-panel">
+            <div class="card" data-reveal="left" style="padding: 18px">
+              <ul class="sec-list">
+                <li>Vulnerability Assessment</li>
+                <li>Web Application Security</li>
+                <li>Bug Bounty Hunting</li>
+                <li>Penetration Testing</li>
+                <li>Security Operations (SOC)</li>
+                <li>SIEM Engineering</li>
+                <li>Threat Detection &amp; Response</li>
+                <li>Network Security</li>
+                <li>Linux Security</li>
+                <li>Security Automation</li>
+                <li>AI Security</li>
+                <li>Prompt Injection &amp; Jailbreak Research</li>
+              </ul>
+            </div>
+
+            <div class="card terminal" data-terminal data-reveal="scale" style="--d: 80ms">
+              <div class="terminal-bar" aria-hidden="true">
+                <i></i><i></i><i></i>
+                <span>~/greywatch</span>
+              </div>
+              <div class="terminal-body">
+                <div data-line>
+                  <span class="c">$</span> <span class="p">greywatch</span> status
+                </div>
+                <div data-line><span class="k">ingest</span> ssh, sudo, suricata eve.json</div>
+                <div data-line><span class="k">detect</span> ssh brute-force → incident</div>
+                <div data-line><span class="k">stack</span> FastAPI · SQLite · React</div>
+                <div data-line><span class="p">ready</span> single host, self-hosted</div>
+                <div data-line><span class="c">// early development — keep it local</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Toolkit by job</h2>
+            <p class="section-note">Explored in projects and labs</p>
+          </div>
+
+          <dl class="tool-table" data-reveal>
+            <div class="tool-row">
+              <dt>Web security</dt>
+              <dd>Burp Suite, OWASP ZAP</dd>
+            </div>
+            <div class="tool-row">
+              <dt>Reconnaissance</dt>
+              <dd>Nmap, Amass, httpx</dd>
+            </div>
+            <div class="tool-row">
+              <dt>Network monitoring</dt>
+              <dd>Suricata</dd>
+            </div>
+            <div class="tool-row">
+              <dt>SIEM</dt>
+              <dd>Greywatch, Wazuh</dd>
+            </div>
+            <div class="tool-row">
+              <dt>Testing</dt>
+              <dd>OWASP Juice Shop</dd>
+            </div>
+            <div class="tool-row">
+              <dt>Operating systems</dt>
+              <dd>Fedora, Kali Linux</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Learning, in progress</h2>
+            <p class="section-note">Not completed — actively working on</p>
+          </div>
+
+          <div class="status-table" data-reveal>
+            <div class="status-row">
+              <span>eJPT</span>
+              <span class="status active">Pursuing</span>
+            </div>
+            <div class="status-row">
+              <span>Splunk Enterprise Security</span>
+              <span class="status">Preparing</span>
+            </div>
+            <div class="status-row">
+              <span>Security Operations</span>
+              <span class="status learning">Learning</span>
+            </div>
+            <div class="status-row">
+              <span>Detection Engineering</span>
+              <span class="status learning">Learning</span>
+            </div>
+            <div class="status-row">
+              <span>Linux Security</span>
+              <span class="status learning">Practical</span>
+            </div>
+            <div class="status-row">
+              <span>Bug Bounty</span>
+              <span class="status active">Active research</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="actions" style="margin: 0 0 clamp(28px, 4vh, 48px)">
+          <a class="btn primary" href="./work.html">
+            See the projects
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn ghost" href="./contact.html">Get in touch</a>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="hint">
+          <span class="hint-key">move</span>
+          your cursor — the flock veers away
+        </p>
+        <p class="credit">
+          Cranes after
+          <a
+            href="https://github.com/Pawan-webdeveloper/Ascii-Animals-extension"
+            target="_blank"
+            rel="noreferrer noopener"
+            >ASCII Animals</a
+          >
+          <span aria-hidden="true">·</span>
+          MIT
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

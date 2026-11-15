@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Anurag Raghatwan — Computer Engineering student at NMIET Pune, security researcher and open-source contributor. Background, community work and interests."
+    />
+    <meta name="theme-color" content="#0a0c11" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>About — Anurag Raghatwan</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/Geist-Variable.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/GeistMono-Variable.woff2"
+      crossorigin
+    />
+  </head>
+  <body data-page="about">
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <filter
+        id="glass-warp"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        color-interpolation-filters="sRGB"
+      >
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.008 0.012"
+          numOctaves="2"
+          seed="4"
+          result="noise"
+        />
+        <feGaussianBlur in="noise" stdDeviation="2" result="map" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="map"
+          scale="36"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+
+    <div class="page">
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Anurag Raghatwan — home">
+          <span class="wordmark-mark" aria-hidden="true">AR</span>
+          <span>anurag<span class="dim">.rag</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="./" data-nav="home">Home</a>
+          <a href="./skills.html" data-nav="skills">Skills</a>
+          <a href="./work.html" data-nav="work">Work</a>
+          <a href="./about.html" data-nav="about">About</a>
+          <a href="./contact.html" data-nav="contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="page-head">
+          <p class="eyebrow enter" data-enter="1">
+            <span class="dot" aria-hidden="true"></span>
+            About
+          </p>
+          <h1 class="page-title enter" data-enter="2" style="margin-top: 18px">
+            Software engineering, with a <span class="accent">security habit</span>.
+          </h1>
+          <p class="page-lede enter" data-enter="3">
+            Computer Engineering student, builder of small security tools, and an occasional
+            open-source contributor. I like problems where the software and the threat model have to
+            be designed together.
+          </p>
+        </div>
+
+        <section class="section">
+          <div class="about-grid">
+            <div class="prose" data-reveal="left">
+              <p>
+                I'm a Computer Engineering graduate-in-progress at <strong>NMIET, Pune</strong>
+                (Savitribai Phule Pune University, batch of 2026). My interest in security started
+                with breaking things and turned into wanting to build the tooling that notices when
+                someone else does.
+              </p>
+              <p>
+                Most of my work combines software engineering with security research: monitoring and
+                threat detection, vulnerability assessment, and automation that removes repetitive
+                work. Greywatch, my open-source SIEM, is the clearest example — it covers ingestion,
+                normalization, detection and triage in one small system.
+              </p>
+              <p>
+                I also contribute to open-source projects, mostly code, tests and documentation,
+                because reading someone else's codebase is still the fastest way to learn how
+                software is really put together.
+              </p>
+            </div>
+
+            <div class="card facts" data-reveal="scale" style="--d: 80ms">
+              <div class="fact">
+                <dt>Name</dt>
+                <dd>Anurag Raghatwan</dd>
+              </div>
+              <div class="fact">
+                <dt>Location</dt>
+                <dd>Pune, Maharashtra, India</dd>
+              </div>
+              <div class="fact">
+                <dt>Degree</dt>
+                <dd>B.E. Computer Engineering · 2026</dd>
+              </div>
+              <div class="fact">
+                <dt>Institute</dt>
+                <dd>Nutan Maharashtra Institute of Engineering and Technology, Pune</dd>
+              </div>
+              <div class="fact">
+                <dt>University</dt>
+                <dd>Savitribai Phule Pune University (SPPU)</dd>
+              </div>
+              <div class="fact">
+                <dt>Availability</dt>
+                <dd>Open to opportunities</dd>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">How I spend my time</h2>
+            <p class="section-note">Projects &amp; community</p>
+          </div>
+
+          <div class="timeline" data-reveal>
+            <div class="tl-item">
+              <span class="tl-when">Ongoing</span>
+              <h3 class="tl-title">Independent security research</h3>
+              <p class="tl-sub">
+                Vulnerability research, reconnaissance and web application security. Bug bounty
+                hunting as active research interest.
+              </p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-when">Ongoing</span>
+              <h3 class="tl-title">Security tool developer — Greywatch</h3>
+              <p class="tl-sub">
+                Building an open-source SIEM focused on Linux security monitoring, SSH brute-force
+                detection and Suricata event investigation.
+              </p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-when">Ongoing</span>
+              <h3 class="tl-title">Open-source contributor</h3>
+              <p class="tl-sub">
+                Contributing code, tests and documentation to community-driven projects, including
+                OpsiMate and work around the LFX Mentorship ecosystem.
+              </p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-when">2022 — 2026</span>
+              <h3 class="tl-title">B.E. Computer Engineering</h3>
+              <p class="tl-sub">
+                Nutan Maharashtra Institute of Engineering and Technology, Pune · SPPU.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Certifications &amp; learning</h2>
+            <p class="section-note">In progress, not completed</p>
+          </div>
+
+          <div class="status-table" data-reveal>
+            <div class="status-row">
+              <span>eJPT — eLearnSecurity Junior Penetration Tester</span>
+              <span class="status active">Pursuing</span>
+            </div>
+            <div class="status-row">
+              <span>Splunk Enterprise Security</span>
+              <span class="status">Preparing / exploring</span>
+            </div>
+            <div class="status-row">
+              <span>Security Operations</span>
+              <span class="status learning">Learning</span>
+            </div>
+            <div class="status-row">
+              <span>Detection Engineering</span>
+              <span class="status learning">Learning</span>
+            </div>
+            <div class="status-row">
+              <span>Linux Security</span>
+              <span class="status learning">Practical experience</span>
+            </div>
+            <div class="status-row">
+              <span>Bug Bounty</span>
+              <span class="status active">Active research interest</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Beyond the terminal</h2>
+            <p class="section-note">A little personality</p>
+          </div>
+
+          <div class="interest-grid">
+            <article class="card interest" data-reveal>
+              <h3>Valorant · Immortal</h3>
+              <p>
+                Competitive gaming, mostly Valorant. Reached Immortal rank — the same
+                pattern-reading and patience that helps in security work, with worse teammates.
+              </p>
+            </article>
+            <article class="card interest" data-reveal style="--d: 60ms">
+              <h3>Linux &amp; open source</h3>
+              <p>
+                Fedora daily, Kali when testing. I like the ecosystem where you can read the source
+                of the thing that just broke.
+              </p>
+            </article>
+            <article class="card interest" data-reveal style="--d: 120ms">
+              <h3>Developer tools</h3>
+              <p>
+                Building small tools that remove friction — automation, dashboards, and anything
+                that turns a manual checklist into a command.
+              </p>
+            </article>
+            <article class="card interest" data-reveal style="--d: 180ms">
+              <h3>AI applications</h3>
+              <p>
+                Exploring AI-powered apps, and the security side of that: prompt injection and
+                jailbreak research.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <div class="actions" style="margin: 0 0 clamp(28px, 4vh, 48px)">
+          <a class="btn primary" href="./work.html">
+            See the work
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn ghost" href="./contact.html">Get in touch</a>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="hint">
+          <span class="hint-key">move</span>
+          your cursor — the flock veers away
+        </p>
+        <p class="credit">
+          Cranes after
+          <a
+            href="https://github.com/Pawan-webdeveloper/Ascii-Animals-extension"
+            target="_blank"
+            rel="noreferrer noopener"
+            >ASCII Animals</a
+          >
+          <span aria-hidden="true">·</span>
+          MIT
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

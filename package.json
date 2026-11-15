@@ -1,0 +1,27 @@
+{
+  "name": "anurag-portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp run typecheck && vp build",
+    "preview": "vp preview",
+    "typecheck": "tsrs --noEmit",
+    "lint": "vp lint",
+    "fmt": "vp fmt"
+  },
+  "devDependencies": {
+    "tsrs": "0.25.0-ts7.1.0-beta",
+    "typescript": "~7.0.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.21.0",
+      "onFail": "download"
+    }
+  }
+}

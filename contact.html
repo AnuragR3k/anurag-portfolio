@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Anurag Raghatwan — security engineer and full-stack developer in Pune, open to opportunities and collaboration."
+    />
+    <meta name="theme-color" content="#0a0c11" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Contact — Anurag Raghatwan</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/Geist-Variable.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/GeistMono-Variable.woff2"
+      crossorigin
+    />
+  </head>
+  <body data-page="contact">
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <filter
+        id="glass-warp"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        color-interpolation-filters="sRGB"
+      >
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.008 0.012"
+          numOctaves="2"
+          seed="4"
+          result="noise"
+        />
+        <feGaussianBlur in="noise" stdDeviation="2" result="map" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="map"
+          scale="36"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+
+    <div class="page">
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Anurag Raghatwan — home">
+          <span class="wordmark-mark" aria-hidden="true">AR</span>
+          <span>anurag<span class="dim">.rag</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="./" data-nav="home">Home</a>
+          <a href="./skills.html" data-nav="skills">Skills</a>
+          <a href="./work.html" data-nav="work">Work</a>
+          <a href="./about.html" data-nav="about">About</a>
+          <a href="./contact.html" data-nav="contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="page-head">
+          <p class="eyebrow enter" data-enter="1">
+            <span class="dot" aria-hidden="true"></span>
+            Contact
+          </p>
+          <h1 class="page-title enter" data-enter="2" style="margin-top: 18px">
+            Let's talk about <span class="accent">something worth building</span>.
+          </h1>
+          <p class="page-lede enter" data-enter="3">
+            Roles, collaborations, security research, or a project that needs both engineering and a
+            threat model — I'm open to it.
+          </p>
+        </div>
+
+        <section class="section" style="padding-top: 0; border-top: 0">
+          <div class="contact-grid">
+            <div>
+              <div class="contact-list" data-reveal="left">
+                <div class="contact-item">
+                  <span class="icon" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m3.5 7 8.5 6 8.5-6" />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="label">Email</span>
+                    <a class="value" href="mailto:anuragrag9890@gmail.com"
+                      >anuragrag9890@gmail.com</a
+                    >
+                  </span>
+                  <button
+                    class="btn small ghost copy-btn"
+                    type="button"
+                    data-copy="anuragrag9890@gmail.com"
+                    aria-label="Copy email address"
+                  >
+                    Copy
+                  </button>
+                </div>
+
+                <a
+                  class="contact-item"
+                  href="https://github.com/AnuragR3k"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span class="icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="label">GitHub</span>
+                    <span class="value">github.com/AnuragR3k</span>
+                  </span>
+                  <span class="copy-btn" aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  class="contact-item"
+                  href="https://github.com/AnuragR3k/greywatch"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span class="icon" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 3 4 7v5c0 5 3.4 7.7 8 9 4.6-1.3 8-4 8-9V7l-8-4Z" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="label">Project</span>
+                    <span class="value">Greywatch — open-source SIEM</span>
+                  </span>
+                  <span class="copy-btn" aria-hidden="true">↗</span>
+                </a>
+
+                <div class="contact-item">
+                  <span class="icon" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" />
+                      <circle cx="12" cy="10" r="2.6" />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="label">Location</span>
+                    <span class="value">Pune, Maharashtra, India</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="card availability" data-reveal style="--d: 120ms">
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <h3>Available for opportunities</h3>
+                  <p>
+                    Internships, junior security or full-stack roles, and open-source
+                    collaborations. I usually reply within a couple of days.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="card form-card"
+              data-contact-form
+              data-mailto="anuragrag9890@gmail.com"
+              data-reveal="scale"
+              style="--d: 80ms"
+              novalidate
+            >
+              <h2 class="section-title" style="margin-bottom: 16px">Send a message</h2>
+
+              <div class="field">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What would you like to build or discuss?"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                class="btn primary"
+                type="submit"
+                style="width: 100%; justify-content: center"
+              >
+                Send message
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+
+              <p class="form-note" data-form-status role="status" aria-live="polite">
+                Opens your email app with the message ready to send. Nothing is stored on this site.
+              </p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Before you write</h2>
+            <p class="section-note">Useful context</p>
+          </div>
+          <div class="interest-grid">
+            <article class="card interest" data-reveal>
+              <h3>Security work</h3>
+              <p>
+                Vulnerability assessment, SIEM engineering, detection rules, and Linux hardening.
+              </p>
+            </article>
+            <article class="card interest" data-reveal style="--d: 60ms">
+              <h3>Full-stack builds</h3>
+              <p>React front ends, Python or Node APIs, small self-hosted deployments.</p>
+            </article>
+            <article class="card interest" data-reveal style="--d: 120ms">
+              <h3>Open source</h3>
+              <p>Contributions, tests, docs, and maintainer-friendly pull requests.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="hint">
+          <span class="hint-key">move</span>
+          your cursor — the flock veers away
+        </p>
+        <p class="credit">
+          Cranes after
+          <a
+            href="https://github.com/Pawan-webdeveloper/Ascii-Animals-extension"
+            target="_blank"
+            rel="noreferrer noopener"
+            >ASCII Animals</a
+          >
+          <span aria-hidden="true">·</span>
+          MIT
+        </p>
+      </footer>
+    </div>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

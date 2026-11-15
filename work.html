@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Selected work by Anurag Raghatwan — Greywatch, an open-source SIEM; VulnX, a web vulnerability scanner; CloudPilot, football-var and ShadowLab."
+    />
+    <meta name="theme-color" content="#0a0c11" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Work — Anurag Raghatwan</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/Geist-Variable.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/src/fonts/GeistMono-Variable.woff2"
+      crossorigin
+    />
+  </head>
+  <body data-page="work">
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <filter
+        id="glass-warp"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        color-interpolation-filters="sRGB"
+      >
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.008 0.012"
+          numOctaves="2"
+          seed="4"
+          result="noise"
+        />
+        <feGaussianBlur in="noise" stdDeviation="2" result="map" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="map"
+          scale="36"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+
+    <div class="page">
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Anurag Raghatwan — home">
+          <span class="wordmark-mark" aria-hidden="true">AR</span>
+          <span>anurag<span class="dim">.rag</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="./" data-nav="home">Home</a>
+          <a href="./skills.html" data-nav="skills">Skills</a>
+          <a href="./work.html" data-nav="work">Work</a>
+          <a href="./about.html" data-nav="about">About</a>
+          <a href="./contact.html" data-nav="contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="page-head">
+          <p class="eyebrow enter" data-enter="1">
+            <span class="dot" aria-hidden="true"></span>
+            Selected work
+          </p>
+          <h1 class="page-title enter" data-enter="2" style="margin-top: 18px">
+            Things I've built to <span class="accent">understand</span> the problem.
+          </h1>
+          <p class="page-lede enter" data-enter="3">
+            Mostly security tooling and full-stack applications. Each project started as a question
+            I wanted to answer by building it end to end.
+          </p>
+        </div>
+
+        <section class="section" aria-labelledby="greywatch-title">
+          <article class="featured" data-reveal="scale">
+            <div>
+              <span class="badge"
+                ><span class="dot" aria-hidden="true"></span> Featured project</span
+              >
+              <h2 id="greywatch-title">Greywatch SIEM</h2>
+              <p class="summary">
+                A small, self-hosted Security Information and Event Management platform for Linux.
+                It pulls in SSH and sudo logs plus Suricata alerts, normalises them into events,
+                runs detection rules, and gives you a dashboard to investigate what fired.
+              </p>
+              <ul class="feature-list">
+                <li>SSH authentication monitoring from the systemd journal</li>
+                <li>SSH brute-force detection that raises alerts with evidence attached</li>
+                <li>
+                  Suricata <code>eve.json</code> integration for alerts, DNS, HTTP, TLS and flow
+                </li>
+                <li>Event normalization, ingestion and cross-event correlation into incidents</li>
+                <li>Cursor-based log collection with checkpointing and deduplication</li>
+                <li>API trust boundaries, authentication and request-size protection</li>
+                <li>Automated backend test coverage across the API and detection paths</li>
+              </ul>
+              <div class="actions" style="margin-top: 4px">
+                <a
+                  class="btn primary"
+                  href="https://github.com/AnuragR3k/greywatch"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  View on GitHub
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M9 7h8v8" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="featured-side">
+              <dl class="spec">
+                <dt>Stack</dt>
+                <dd>Python · FastAPI · React · Vite · SQLite · Suricata · systemd journal</dd>
+              </dl>
+              <dl class="spec">
+                <dt>Kind</dt>
+                <dd>Open source · security engineering</dd>
+              </dl>
+              <dl class="spec">
+                <dt>Engineering notes</dt>
+                <dd>
+                  Modular ingestion architecture, incremental collection with checkpoints,
+                  correlation between brute-force activity and successful SSH logins, and schema
+                  migrations with an audit chain.
+                </dd>
+              </dl>
+              <dl class="spec">
+                <dt>Status</dt>
+                <dd>
+                  Early development — built to learn SIEM end to end, and run on a single host.
+                </dd>
+              </dl>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Other projects</h2>
+            <p class="section-note">04 selected</p>
+          </div>
+
+          <div class="project-grid">
+            <article class="card project" data-reveal>
+              <div class="project-top">
+                <span class="index">02</span>
+                <span class="tag">Security research</span>
+              </div>
+              <h3>VulnX</h3>
+              <p>
+                Automated web vulnerability scanner and OSINT toolkit. Runs reconnaissance, XSS
+                checks and SSL/TLS certificate analysis, then stores results in SQLite with a React
+                dashboard on top.
+              </p>
+              <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">Flask</span>
+                <span class="chip">React</span>
+                <span class="chip">SQLite</span>
+              </div>
+              <div class="foot">
+                <a
+                  href="https://github.com/AnuragR3k/vulnx"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >GitHub ↗</a
+                >
+                <a href="https://vulnx.vercel.app" target="_blank" rel="noreferrer noopener"
+                  >Live demo ↗</a
+                >
+              </div>
+            </article>
+
+            <article class="card project" data-reveal style="--d: 70ms">
+              <div class="project-top">
+                <span class="index">03</span>
+                <span class="tag">Cloud &amp; development</span>
+              </div>
+              <h3>CloudPilot</h3>
+              <p>
+                A cloud console concept with project, dashboard and deployment views, backed by a
+                small Node server with its own routes and database layer.
+              </p>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">Vite</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">Express</span>
+              </div>
+              <div class="foot">
+                <a
+                  href="https://github.com/AnuragR3k/CloudPilot"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >GitHub ↗</a
+                >
+                <a
+                  href="https://cloudpilot-eight.vercel.app"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Live demo ↗</a
+                >
+              </div>
+            </article>
+
+            <article class="card project" data-reveal style="--d: 140ms">
+              <div class="project-top">
+                <span class="index">04</span>
+                <span class="tag">AI &amp; computer vision</span>
+              </div>
+              <h3>Football VAR</h3>
+              <p>
+                A football technology experiment exploring video assistant referee logic: player
+                tracking, pitch calibration, offside geometry, penalty detection and VAR decision
+                output.
+              </p>
+              <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">YOLO</span>
+                <span class="chip">Computer vision</span>
+              </div>
+              <div class="foot">
+                <a
+                  href="https://github.com/AnuragR3k/football-var"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >GitHub ↗</a
+                >
+                <span>In progress</span>
+              </div>
+            </article>
+
+            <article class="card project" data-reveal style="--d: 210ms">
+              <div class="project-top">
+                <span class="index">05</span>
+                <span class="wip">Concept</span>
+              </div>
+              <h3>ShadowLab</h3>
+              <p>
+                A transcription shadow-testing and regression evaluation concept, designed around a
+                job-application engineering challenge. Presently a design and test-harness exercise
+                rather than a finished product.
+              </p>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">Python</span>
+                <span class="chip">FastAPI</span>
+              </div>
+              <div class="foot">
+                <span>Not public yet</span>
+                <span>In development</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title">Open source</h2>
+            <p class="section-note">Community contributions</p>
+          </div>
+
+          <div class="contrib">
+            <article class="card contrib-card" data-reveal="left">
+              <h3>OpsiMate</h3>
+              <p class="repo">github.com/OpsiMate/OpsiMate</p>
+              <ul class="tick-list">
+                <li>
+                  Worked on issue #1262 — tests and a dedicated branch for the alert confirmation
+                  dialog.
+                </li>
+                <li>
+                  Worked on documentation issue #1325 — created
+                  <code>docs/1325-integrations-overview</code>.
+                </li>
+                <li>
+                  Updated the integration overview docs and built the documentation site locally to
+                  verify it.
+                </li>
+                <li>Addressed review feedback and committed the documentation improvements.</li>
+              </ul>
+            </article>
+
+            <article class="card contrib-card" data-reveal="left" style="--d: 90ms">
+              <h3>LFX Mentorship</h3>
+              <p class="repo">Community involvement</p>
+              <ul class="tick-list">
+                <li>
+                  Engaged with the LFX Mentorship ecosystem and its open-source project communities.
+                </li>
+                <li>
+                  Also keeping bug-bounty research notes and resources public in my repositories.
+                </li>
+              </ul>
+              <div class="actions" style="margin-top: 16px">
+                <a
+                  class="btn small ghost"
+                  href="https://github.com/AnuragR3k?tab=repositories"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >All repositories ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="actions" style="margin: 0 0 clamp(28px, 4vh, 48px)">
+          <a class="btn primary" href="./contact.html">
+            Let's work together
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn ghost" href="./about.html">More about me</a>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="hint">
+          <span class="hint-key">move</span>
+          your cursor — the flock veers away
+        </p>
+        <p class="credit">
+          Cranes after
+          <a
+            href="https://github.com/Pawan-webdeveloper/Ascii-Animals-extension"
+            target="_blank"
+            rel="noreferrer noopener"
+            >ASCII Animals</a
+          >
+          <span aria-hidden="true">·</span>
+          MIT
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
